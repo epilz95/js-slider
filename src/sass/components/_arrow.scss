@@ -1,0 +1,62 @@
+.arrow {
+    position: absolute;
+    z-index: 100;
+    top: calc(50vh - 30px);
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &__hover {
+        display: block;
+
+        position: absolute;
+        z-index: 99;
+        top: calc(50vh - 30px);
+
+        opacity: 0;
+        filter: blur(3px);
+        transform: scale(1.2);
+        transition: opacity 0.2s;
+    }
+
+    &--prev__hover {
+        @extend .svg-icon__arrow-left--white;
+        @extend .svg-icon__arrow-left--white-dims;
+
+        left: 130px;
+    }
+
+    &--next__hover {
+        @extend .svg-icon__arrow-right--white;
+        @extend .svg-icon__arrow-right--white-dims;
+
+        right: 130px;
+    }
+
+    &--prev {
+        @extend .svg-icon__arrow-left;
+        @extend .svg-icon__arrow-left-dims;
+
+        left: 130px;
+
+        &:hover {
+            + .arrow--prev__hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--next {
+        @extend .svg-icon__arrow-right;
+        @extend .svg-icon__arrow-right-dims;
+
+        right: 130px;
+
+        &:hover {
+            + .arrow--next__hover {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -6,12 +6,10 @@
 @import "abstracts/config";
 @import "abstracts/colors";
 @import "abstracts/mixins";
-@import "components/svg-sprite.scss";
-
-html {
-    content: "";
-
-    margin: 5px;
-
-    color: red;
-}
+@import "components/arrow";
+@import "components/circle";
+@import "components/headline";
+@import "components/paragraph";
+@import "components/slider";
+@import "components/slider-nav";
+@import "components/svg-sprite";
