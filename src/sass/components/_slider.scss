@@ -1,0 +1,89 @@
+.slider {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    &__slide {
+        display: none;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        padding-top: 100px;
+
+        &:nth-of-type(1) {
+            display: block;
+
+            background-color: $color-buttercup;
+
+            .circle::after {
+                @extend .svg-icon__bee;
+                @extend .svg-icon__bee-dims;
+            }
+        }
+
+        &:nth-of-type(2) {
+            background-color: $color-woodsmoke;
+
+            .circle::after {
+                @extend .svg-icon__network;
+                @extend .svg-icon__network-dims;
+            }
+
+            .headline,
+            .paragraph {
+                color: $color-white;
+            }
+        }
+
+        &:nth-of-type(3) {
+            background-color: $color-mercury;
+
+            .circle::after {
+                @extend .svg-icon__chicken;
+                @extend .svg-icon__chicken-dims;
+            }
+        }
+
+        &:nth-of-type(4) {
+            background-color: $color-cape-cod;
+
+            .circle::after {
+                @extend .svg-icon__pencil;
+                @extend .svg-icon__pencil-dims;
+            }
+
+            .headline,
+            .paragraph {
+                color: $color-white;
+            }
+        }
+
+        &:nth-of-type(5) {
+            background-color: $color-stratos;
+
+            .circle::after {
+                @extend .svg-icon__fish;
+                @extend .svg-icon__fish-dims;
+
+                top: calc(50% - 75px);
+            }
+
+            .headline,
+            .paragraph {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__slide__inner {
+        margin: 0 auto;
+        width: 700px;
+    }
+}

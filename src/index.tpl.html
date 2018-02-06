@@ -3,32 +3,75 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>testProject</title>
+    <title>JS Slider</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display" rel="stylesheet"> 
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
 <div class="l-wrapper">
-    <header class="l-header">
-        <div class="svg-icon__arrow-left--lg--grey svg-icon__arrow-left--lg--grey-dims"></div>
-    </header>
-
-    <nav class="l-nav-main">
-
-    </nav>
-
-    <main role="main" class="l-content">
-        <div id="test" class="test">
-            Test text rot mit blauem hintergrund...
-            <p>additional text</p>
-            <img src="img/web.png" />
-        </div>
-    </main>
-
-    <footer class="l-footer">
-
-    </footer>
+    <section class="slider">
+        <button class="arrow arrow--prev"></button>
+        <span class="arrow__hover arrow--prev__hover"></span>
+        <button class="arrow arrow--next"></button>
+        <span class="arrow__hover arrow--next__hover"></span>
+        <nav class="slider-nav">
+            <ul>
+                <li class="slider-nav__item">
+                    <button class="slider-nav__button slider-nav__button--active"></button>
+                </li>
+                <li class="slider-nav__item">
+                    <button class="slider-nav__button"></button>
+                </li>
+                <li class="slider-nav__item">
+                    <button class="slider-nav__button"></button>
+                </li>
+                <li class="slider-nav__item">
+                    <button class="slider-nav__button"></button>
+                </li>
+                <li class="slider-nav__item">
+                    <button class="slider-nav__button"></button>
+                </li>
+            </ul>
+        </nav>
+        <section class="slider__slide">
+            <div class="slider__slide__inner">
+                <div class="circle"></div>
+                <h2 class="headline">To bee or not to bee</h2>
+                <p class="paragraph">Honey bees can recognize human faces.</p>
+            </div>
+        </section>
+        <section class="slider__slide">
+            <div class="slider__slide__inner">
+                <div class="circle"></div>
+                <h2 class="headline">Los Angeles</h2>
+                <p class="paragraph">Los Angeles's full name is "El Pueblo de Nuestra Senora la Reina de los Angeles de Porciuncula."</p>
+            </div>
+        </section>
+        <section class="slider__slide">
+            <div class="slider__slide__inner">
+                <div class="circle"></div>
+                <h2 class="headline">Chicken wings</h2>
+                <p class="paragraph">The longest recorded flight of a chicken is 13 seconds.</p>
+            </div>
+        </section>
+        <section class="slider__slide">
+            <div class="slider__slide__inner">
+                <div class="circle"></div>
+                <h2 class="headline">From a to z</h2>
+                <p class="paragraph">The sentence "The quick brown fox jumps over the lazy dog" uses every letter of the alphabet.</p>
+            </div>
+        </section>
+        <section class="slider__slide">
+            <div class="slider__slide__inner">
+                <div class="circle"></div>
+                <h2 class="headline">Did I swim by that rock already?</h2>
+                <p class="paragraph">A goldfish has a memory span of just three seconds.</p>
+            </div>
+        </section>
+    </section>
 </div>
 
 </body>
