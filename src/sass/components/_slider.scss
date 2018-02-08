@@ -17,9 +17,14 @@
 
         padding-top: 100px;
 
-        &:nth-of-type(1) {
-            display: block;
+        animation: slideInSlide 0.5s forwards;
+        transition: bottom 0.2s;
 
+        &--active {
+            display: block;
+        }
+
+        &:nth-of-type(1) {
             background-color: $color-buttercup;
 
             .circle::after {
@@ -83,7 +88,19 @@
     }
 
     &__slide__inner {
+        position: relative;
+
         margin: 0 auto;
-        width: 700px;
+        width: 725px;
+    }
+}
+
+@keyframes slideInSlide {
+    0% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: 0;
     }
 }

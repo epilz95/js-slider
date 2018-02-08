@@ -1,12 +1,15 @@
 .circle {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 152px);
 
-    margin: 0 auto;
     border: 2px dashed $color-oslo-gray;
     width: 300px;
     height: 300px;
 
+    animation: rollIn 0.8s linear;
     border-radius: 50%;
+    transition: transform 1s left 1s;
 
     &::before {
         content: "";
@@ -30,5 +33,17 @@
         left: calc(50% - 100px);
 
         transform: scale(0.7);
+    }
+}
+
+@keyframes rollIn {
+    0% {
+        left: -200px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: calc(50% - 152px);
+        transform: rotate(360deg);
     }
 }
