@@ -1,8 +1,30 @@
 .paragraph {
+    position: absolute;
+    top: 425px;
+    left: 0;
+
     margin: 0;
+    width: 100%;
+
+    opacity: 0;
 
     font-size: 20px;
     font-family: "Fauna One", serif;
-
     text-align: center;
+
+    animation: fadeInParagraph 0.5s forwards;
+    animation-delay: 0.5s;
+    transition: top 0.2s opacity 0.2s;
+}
+
+@keyframes fadeInParagraph {
+    0% {
+        top: 380px;
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 425px;
+        opacity: 1;
+    }
 }

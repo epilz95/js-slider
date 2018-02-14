@@ -1,8 +1,31 @@
 .headline {
-    margin: 55px 0 30px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+
+    margin: 0;
+    width: 100%;
+
+    opacity: 0;
 
     font-size: 50px;
     font-family: "Playfair Display", serif;
 
     text-align: center;
+
+    animation: fadeInHeadline 0.5s forwards;
+    animation-delay: 0.3s;
+    transition: top 0.2s opacity 0.2s;
+}
+
+@keyframes fadeInHeadline {
+    0% {
+        top: 300px;
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 350px;
+        opacity: 1;
+    }
 }
